@@ -1,0 +1,106 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace qarnd
+{
+    class HoemWork
+
+    {
+        static void Main(string[] args)
+        {
+            //Ex1
+            int a = 52130;
+            sbyte b = -115;
+            uint c = 4825932;
+            sbyte d = 97;
+            short e = -10000;
+            short f = 20000;
+            byte g = 224;
+            uint h = 970700000;
+            byte i = 112;
+            sbyte j = -44;
+            long k = -1000000;
+            ushort l = 1990;
+            ulong m = 123456789123456789;
+
+            //Ex2
+            //Which of the following values can be assigned to variables of type float, double and decimal: 
+            // 5, -5.01, 34.567839023; 12.345; 8923.1234857; 3456.091124875956542151256683467?
+            float aa = 5f;
+            float bb = -5.01f;
+            float cc = 12.345f;
+            double dd = 34.567839023;
+            double ee = 8923.1234857;
+            decimal ff = 3456.091124875956542151256683467m;
+
+            //Ex3
+            //Write a program, which compares correctly two real numbers with accuracy at least 0.000001.
+            double a1 = 1.12344123d;
+            double b1 = 1.12344d;
+            bool equal = Math.Abs (a - b) < 0.000001;
+
+            //Ex6
+            //Declare a variable isMale of type bool and assign a value to it depending on your gender.
+            Console.WriteLine("Your gender?");
+            string gender = (Console.ReadLine());
+
+            if (gender == "male")
+            {
+                bool isMale = true;
+                Console.WriteLine("Welcome dude!");
+            }
+            else
+            {
+                bool isMale = false;
+                Console.WriteLine("Sorry, only for gyus");
+            }
+
+            //Ex8
+            //Declare two variables of type string and assign them values "Hello" and "World". 
+            //Declare a variable of type object and assign to it the value obtained of concatenation 
+            //of the two variables of type string (do not miss the space in the middle). 
+            //Declare a third variable of type string and initialize it with the value of the variable of type object 
+            //(you should use type casting).
+            string he = "Hello";
+            string wo = "World";
+            object hewo = (he + " " + wo);
+            string hw2 = (Convert.ToString(hewo));
+            Console.WriteLine(hw2);
+            Console.ReadKey();
+
+
+            //Ex9
+            //Declare two variables of type string and assign them a value “The "use" of quotations causes difficulties.” 
+            //(without the outer quotes). In one of the variables use quoted string and in the other do not use it.
+            string value1 = "The \"use\" of quotations causes difficulties.";
+            string value2 = "The use of quotations causes difficulties.";
+            Console.WriteLine(value1+ " " +value2);
+
+            //Ex12
+            //A company dealing with marketing wants to keep a data record of its employees. 
+            //Each record should have the following characteristic – first name, last name, age, gender (‘m’ or ‘f’) 
+            //and unique employee number (27560000 to 27569999). Declare appropriate variables needed to maintain the information 
+            //for an employee by using the appropriate data types and attribute names.
+            string firstName;
+            string lastName;
+            int age;
+            char genderr;
+            int id;
+
+            //Ex13
+            // Declare two variables of type int. Assign to them values 5 and 10 respectively. 
+            //Exchange (swap) their values and print them.
+            int a2 = 5;
+            int b2 = 10;
+            int c2 = a;
+            a2 = b2;
+            b2 = c2;
+            ////b ^= a;
+
+            Console.WriteLine(a2 + " "+ b2);
+        }
+    }
+}
