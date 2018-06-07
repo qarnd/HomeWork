@@ -1,0 +1,56 @@
+Ex1 \* Declare several variables by selecting for each one of them the most appropriate of the types 
+sbyte, byte, short, ushort, int, uint, long and ulong in order to assign them the following values: 
+52,130; -115; 4825932; 97; -10000; 20000; 224; 970,700,000; 112; -44; -1,000,000; 1990; 123456789123456789.*\
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+sbyte a = -115; 
+sbyte b = -44;
+		
+byte c = 97; 
+byte d = 224; 
+byte e = 112; 
+byte d = 1990
+
+short = -1000;
+ushort = 20000; 
+int = 970,700,000;
+uint = 4825932; 
+long = -1,000,000;
+ulong seconds = 123456789123456789.
+	}
+}
+
+
+Ex2
+\* Which of the following values can be assigned to variables of type float, double and decimal: 
+5, -5.01, 34.567839023; 12.345; 8923.1234857; 3456.091124875956542151256683467  *\
+
+float =   -5.01, 12.345; 8923.1234857
+double = 34.567839023;
+decimal = 3456.091124875956542151256683467
+
+
+Ex3
+using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+			float n = 12.5654433234f;
+			float m = 15.678798f;
+            
+            if (n > m)
+                Console.WriteLine("N is bigger than M");
+            else if (n < m)
+                Console.WriteLine("N is less than M");
+            else
+                Console.WriteLine("N and M are equal");
+        }
+    }
+    
