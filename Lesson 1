@@ -114,3 +114,19 @@ using System;
 			Console.WriteLine(a+ " " +b);
 		}
     }
+    
+    Ex12. NOT DONE
+    using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+		string first_name = "Inna";
+		string last_name = "Petryk";
+		int age = 31;
+		string gender =;
+
+		}
+    }
+
