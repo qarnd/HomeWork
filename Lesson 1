@@ -54,3 +54,30 @@ using System;
         }
     }
     
+Ex6
+using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+		bool isMale = false;
+		Console.WriteLine("My gender is male:");
+        Console.WriteLine(isMale);
+		}
+    }
+    
+    Ex8
+    
+    using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+		string a = "Hello";
+		string b = "world";
+		object c = (a + " " + b);
+			Console.WriteLine(c);
+		}
+    }
