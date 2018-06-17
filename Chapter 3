@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Ex.1
+            //Write an expression that checks whether an integer is odd or even
+            Console.WriteLine("Please enter your value:");
+            int value = Int32.Parse(Console.ReadLine());
+            if (value % 2 == 0)
+            {
+                Console.WriteLine("Your value is even.");
+
+            }
+            else Console.WriteLine("Your value is odd.");
+
+            //Ex.2
+            //Write a Boolean expression that checks whether a given integer is divisible by both 5 and 7, without a remainder.
+
+            if ((value % 5 == 0) && (value % 7 == 0))
+            {
+                Console.WriteLine("Your value is divisible by both 5 and 7 without remainder");
+            }
+            else Console.WriteLine("Your value is divisible by both 5 and 7 with remainder");
+
+            //Ex.3
+            //Write an expression that checks for a given integer if its third digit (right to left) is 7.
+
+            Console.WriteLine("Please enter your integer with 3 digits:");
+            int value2 = Int32.Parse(Console.ReadLine());
+            if (value2 % 10 == 7)
+            {
+                Console.WriteLine("Your 3rd digit is 7 - That's cool!");
+            }
+            else Console.WriteLine("Your 3rd digit is not 7 :(");
+
+            //Ex.10
+            //Write a program that takes as input a four-digit number in format abcd(e.g. 2011) and performs the following actions:
+            //-Calculates the sum of the digits(in our example 2 + 0 + 1 + 1 = 4).
+            //- Prints on the console the number in reversed order: dcba(in our example 1102).
+            //- Puts the last digit in the first position: dabc(in our example 1201).
+            //- Exchanges the second and the third digits: acbd(in our example 2101).
+
+            Console.WriteLine("Please enter your integer with 4 digits:");
+            int value3 = Int32.Parse(Console.ReadLine());            
+            int a = (value3 / 1000) % 10;
+            int b = (value3 / 100) % 10;
+            int c = (value3 / 10) % 10;
+            int d = value3 % 10;
+            Console.WriteLine("Sum of the digits = {0}", (a+b+c+d));
+            Console.WriteLine("Your number in reserved order dcba is: {0},{1},{2},{3}",d,c,b,a);
+            Console.WriteLine("Your number with last digit in the first position is: {0},{1},{2},{3}", d,a,b,c);
+            Console.WriteLine("Your number with exchanged second and third digits is: {0},{1},{2},{3}", a,c,b,d);
+        }
+    }
+}
