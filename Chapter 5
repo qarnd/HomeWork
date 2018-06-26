@@ -1,0 +1,158 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Ex.1
+            //Write an if-statement that takes two integer variables and exchanges their values 
+            //if the first one is greater than the second one
+
+            Console.WriteLine("Please enter your first number: ");
+            int first = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please write your second number: ");
+            int second = Int32.Parse(Console.ReadLine());
+            int third;
+
+            if (first > second)
+            {
+                third = second;
+                second = first;
+                Console.WriteLine("Your first number is bigger than second - their new values are exchanged: first = {0}, second = {1}", third, second);
+            }
+            else
+            {
+                Console.WriteLine("Your first number is not greater than secon or they are equal");
+            }
+
+
+            //Ex.3.
+            //Write a program that finds the biggest of three integers, using nested if statements
+
+            Console.WriteLine("Please enter your first number: ");
+            int number1 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please write your second number: ");
+            int number2 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please write your third number: ");
+            int number3 = Int32.Parse(Console.ReadLine());
+
+            if ((number1 > number2) && (number1 > number2))
+            {
+                Console.WriteLine("First numer is the biggest");
+            }
+
+            else if ((number2 > number1) && (number2 > number3))
+            {
+                Console.WriteLine("Second numer is the biggest");
+            }
+
+            else if ((number3 > number1) && (number3 > number2))
+            {
+                Console.WriteLine("Third numer is the biggest");
+            }
+            else
+            {
+                Console.WriteLine("All numbers are equal");
+            }
+
+            //Ex.5.
+            //Write a program that asks for a digit (0-9), 
+            //and depending on the input, shows the digit as a word (in English). Use a switch statement.
+
+            Console.WriteLine("Please ente your digit from 0 to 9");
+            int digit = Int32.Parse(Console.ReadLine());
+            switch (digit)
+            {
+                case 0:
+                    Console.WriteLine("You entered zero");
+                    break;
+                case 1:
+                    Console.WriteLine("You entered one");
+                    break;
+                case 2:
+                    Console.WriteLine("You entered two");
+                    break;
+                case 3:
+                    Console.WriteLine("You entered tree");
+                    break;
+                case 4:
+                    Console.WriteLine("You entered four");
+                    break;
+                case 5:
+                    Console.WriteLine("You entered five");
+                    break;
+                case 6:
+                    Console.WriteLine("You entered six");
+                    break;
+                case 7:
+                    Console.WriteLine("You entered seven");
+                    break;
+                case 8:
+                    Console.WriteLine("You entered eight");
+                    break;
+                case 9:
+                    Console.WriteLine("You entered nine");
+                    break;
+            }
+            //Write a program that, depending on the user’s choice, inputs int, double or string variable. 
+            //If the variable is int or double, the program increases it by 1. 
+            //If the variable is a string, the program appends "*" at the end. 
+            //Print the result at the console. Use switch statement.
+
+
+            Console.WriteLine("Please select value type of your input: 0 = int, 1 = double, 2 = string");
+            int valueType = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter you number: ");
+            int number = Int32.Parse(Console.ReadLine());
+
+            switch (valueType)
+            {
+                case 0:
+                    Console.WriteLine("Now your value is {0}", (valueType + 1));
+                    break;
+                case 1:
+                    Console.WriteLine("Now your value is {0}", (valueType + 1));
+                    break;
+                case 2:
+                    Console.WriteLine("Now your value is {0}", (valueType * valueType));
+                    break;
+            }
+
+            //Write a program that applies bonus points to given scores in the range [1…9] by the following rules:
+            //- If the score is between 1 and 3, the program multiplies it by 10.
+            //- If the score is between 4 and 6, the program multiplies it by 100.
+            //- If the score is between 7 and 9, the program multiplies it by 1000.
+            //- If the score is 0 or more than 9, the program prints an error message.
+
+            Console.WriteLine("Please enter your score (0-9): ");
+            int score = Int32.Parse(Console.ReadLine());
+            switch (score)
+            {
+                case 1:
+                case 2:
+                case 3:
+                    Console.WriteLine($"Yout score is {score * 10}");
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    Console.WriteLine($"Yout score is {score * 100}");
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    Console.WriteLine($"Yout score is {score * 1000}");
+                    break;
+                default:
+                    Console.WriteLine("Sorry, you have entered wrong score :( ");
+                    break;
+            }
+        }
+    }
+}
