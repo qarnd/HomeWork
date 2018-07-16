@@ -1,0 +1,86 @@
+Ex1
+ Write an if-statement that takes two integer variables and exchanges their values if the first one is greater than the second one
+ 
+using System;
+ 
+public class Program
+{
+    public static void Main()
+    {
+		
+		int a;
+		int b;
+		int temp;
+		
+		Console.Write("Enter first number: ");
+   		a = int.Parse(Console.ReadLine());
+		Console.Write("Enter second number: ");
+   		b = int.Parse(Console.ReadLine());
+		
+		if (a > b)
+		{
+			temp = a;
+			a = b;
+			b = temp;
+		Console.WriteLine("Value of a and b are exchanged {0}, {1}", a, b );
+		}
+		
+		else Console.WriteLine("Value of a and b are NOT exchanged {0}, {1}", a, b );
+    }
+
+}
+
+Ex 3
+ Write a program that finds the biggest of three integers, using nested if statements.
+ 
+using System;
+ 
+public class Program
+{
+    public static void Main()
+    {
+		
+		int a;
+		int b;
+		int c;
+		
+		Console.Write("Enter first number: ");
+   		a = int.Parse(Console.ReadLine());
+		Console.Write("Enter second number: ");
+   		b = int.Parse(Console.ReadLine());
+		Console.Write("Enter third number: ");
+   		c = int.Parse(Console.ReadLine());
+		
+		if (a > b)
+		{
+			Console.WriteLine("a is bigger than b {0}, {1}", a, b);
+			
+			if (a > c)				
+			{
+				Console.WriteLine("a is the biggest value {0}", a);
+			}
+			
+			else 
+			{		
+				Console.WriteLine("c is bigger than a value {0}, {1}", c, a);
+			
+				if (c > b)
+				{
+					Console.WriteLine("C is the biggest value {0}", c);
+				}
+				
+			}
+		}
+		
+		else
+		{
+			if (b > c)
+			Console.WriteLine("b is the biggest value {0}", b);
+			
+			else
+			{
+				Console.WriteLine("c is the biggest value {0}", c);
+			}
+		}
+	}
+}
