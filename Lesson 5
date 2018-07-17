@@ -84,3 +84,71 @@ public class Program
 		}
 	}
 }
+
+
+Ex5
+using System;
+ 
+public class Program
+{
+    public static void Main()
+    {
+	int number;
+	string s;
+	Console.WriteLine("Please write number 0 to 9");
+	number = Convert.ToInt32 (Console.ReadLine());
+		
+		switch (number)
+		{
+    		case 1: s = "one"; break;
+    		case 2: s = "two"; break;
+		case 3: s = "three"; break;
+		case 4: s = "four"; break;
+		case 5: s = "five"; break;
+		case 6: s = "six"; break;
+		case 7: s = "seven"; break;
+		case 8: s = "eight"; break;
+		case 9: s = "nine"; break;
+		case 0: s = "zero"; break;
+		default: s = "Not valid value"; break;
+		}	
+	Console.WriteLine(s);
+	}
+}
+
+Ex8:
+using System;
+ 
+public class Program
+{
+    public static void Main()
+    {
+	
+		int number;
+		double number2;
+		string s;
+			Console.WriteLine("Please enter 1 for int, 2 for double, 3 for string");
+			int choice = Convert.ToInt32 (Console.ReadLine());
+		
+		switch (choice)
+		{
+		case 1:
+			Console.WriteLine("Enter int value");
+			number = Convert.ToInt32 (Console.ReadLine());
+			Console.WriteLine("Value equal:{0}", (number+1));
+			break;			
+    		case 2:
+			Console.WriteLine("Enter double value");
+			number2 = Convert.ToDouble (Console.ReadLine());
+			Console.WriteLine("Value equal:{0}", (number2+1));
+			break;
+		case 3: 
+			Console.WriteLine("Enter string value");
+			s = Console.ReadLine();
+			Console.WriteLine("Value equal:{0}", s+"*");
+			break;	
+		default: Console.WriteLine("Not valid value"); 
+			break;
+		}	
+	}
+}
