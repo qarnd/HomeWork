@@ -152,3 +152,47 @@ public class Program
 		}	
 	}
 }
+
+
+Ex10:
+using System;
+ 
+public class Program
+{
+    public static void Main()
+	{
+	int number;
+	Console.WriteLine("Please write number 0 to 9");
+	number = Convert.ToInt32 (Console.ReadLine());
+		
+		switch (number)
+		{
+    	case 1: 
+		case 2:
+		case 3:	
+			Console.WriteLine("Enter value 1,2,3");
+			number = Convert.ToInt32 (Console.ReadLine());
+			Console.WriteLine("Value equal:{0}", (number*10));
+			break;
+		case 4: 
+		case 5:
+		case 6:	
+			Console.WriteLine("Enter value 4,5,6");
+			number = Convert.ToInt32 (Console.ReadLine());
+			Console.WriteLine("Value equal:{0}", (number*100));
+			break;	
+		case 7: 
+		case 8:
+		case 9:	
+			Console.WriteLine("Enter value 7,8,9");
+			number = Convert.ToInt32 (Console.ReadLine());
+			Console.WriteLine("Value equal:{0}", (number*1000));
+			break;
+			
+		default: 
+			number = Convert.ToInt32(Console.ReadLine()); 
+			Console.WriteLine("Value is not between range: you lost");
+			break;
+		}	
+	}
+}
